@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Oswald", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Pacifico", cursive;
+
+  --color-valley-black: #0D0D0D;
+  --color-valley-slate: #161616;
+  --color-valley-red: #D4212A;
+  --color-valley-green: #34A853;
+  --color-valley-gold: #F1C40F;
+  --color-valley-cream: #F5F5DC;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #0D0D0D;
+    color: #F5F5DC;
+    scroll-padding-top: 5rem;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-script {
+    font-family: var(--font-script);
+  }
+}
+
+.valley-gradient {
+  background: linear-gradient(90deg, #D4212A 0%, #E86F1A 52%, #F1C40F 100%);
+}
+
+.valley-gradient-text {
+  background: linear-gradient(90deg, #D4212A 0%, #F1C40F 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes floatEmber {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(-14px) translateX(6px) rotate(8deg);
+    opacity: 0.85;
+  }
+}
+
+.animate-ember {
+  animation: floatEmber 6s ease-in-out infinite;
+}
+
+.animate-ember-slow {
+  animation: floatEmber 8.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-ember,
+  .animate-ember-slow {
+    animation: none;
+  }
+}

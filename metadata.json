@@ -1,0 +1,6 @@
+{
+  "name": "Red and Green Valley Burger & Shawarma Joint",
+  "description": "Flame-grilled burgers, loaded shawarma wraps, and fresh fruit salads crafted in Port Harcourt, Nigeria with online ordering and WhatsApp checkout.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
